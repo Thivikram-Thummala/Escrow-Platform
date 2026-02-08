@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Escrow Platform - Contracts</title>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="contract.html">Contracts</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="transactions.html">Transactions</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" onclick="logout()">Logout</a>
+      <div class="profile" id="profileSection">
+        <!-- Profile (email & role) will be injected here -->
+      </div>
+    </div>
+  </div>
+
+  <div class="contractsPageContainer">
+    <div class="createContractWrapper">
+
+      <div class="createContract" id="createContract" style="display:none;">
+        <h2>Create Contract</h2>
+
+        <input type="text" id="freelancerEmail" placeholder="Freelancer Email">
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="description" placeholder="Description">
+        <input type="number" id="amount" placeholder="Total Amount">
+
+        <button id="createContractBtn">Create</button>
+        <button id="cancelCreateBtn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="page-header">
+      <h2>Contracts</h2>
+      <button id="newContractBtn" style="display:none;">New Contract</button>
+    <div class="contractsContainer" id="contractsContainer">
+      <table class="table" id="contractsTable">
+        <thead>
+          <tr>
+            <th class="contractTitle">Title</th>
+            <th>Total</th>
+            <th>ID</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- rows injected here -->
+        </tbody>
+      </table>
+      <div id="noContracts" style="display:none;">No contracts found.</div>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/contract.js"></script>
+</body>
+</html>

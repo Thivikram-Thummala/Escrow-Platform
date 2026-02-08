@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Escrow Platform - Dashboard</title>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="contract.html">Contracts</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="transactions.html">Transactions</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" onclick="logout()">Logout</a>
+      <div class="profile" id="profileSection">
+        <!-- Profile (email & role) will be injected here -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-col">
+      <h2>Dashboard</h2>
+      <div id="userInfo"></div>
+    </div>
+    <aside class="sidebar-col">
+      <div class="wallet-box" id="walletSection">
+        <h3>Wallet</h3>
+        <div><strong>Available:</strong> <span id="walletBalance">₹0</span></div>
+        <div><strong>Locked:</strong> <span id="lockedBalance">₹0</span></div>
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button id="addWalletBtn" onclick="promptAddToWallet()">Add to Wallet</button>
+          <button id="withdrawWalletBtn" onclick="promptWithdrawFromWallet()">Withdraw</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

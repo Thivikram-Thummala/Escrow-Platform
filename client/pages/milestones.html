@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Escrow Platform - Milestones</title>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="contract.html">Contracts</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="transactions.html">Transactions</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" onclick="logout()">Logout</a>
+      <div class="profile" id="profileSection">
+        <!-- Profile (email & role) will be injected here -->
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="milestonesPageContainer">
+    <h2>Milestones</h2>
+
+    <div id="milestonesContainer">
+      <table class="table" id="milestonesTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Contract</th>
+            <th>Amount</th>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Dispute</th>
+            <th class="actioncell">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- rows injected here -->
+        </tbody>
+      </table>
+      <div id="noMilestones" style="display:none;">No milestones found.</div>
+    </div>
+
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/milestone.js"></script>
+</body>
+</html>

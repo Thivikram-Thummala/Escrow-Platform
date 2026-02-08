@@ -1,0 +1,441 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+/* Container for all pages*/
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background: transparent;
+  padding-top: 88px; /* reserve space for fixed navbar */
+}
+
+.adminContainer,
+.transactionsPageContainer,
+.milestonesPageContainer,
+.contractsPageContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: transparent;
+  padding-top: 88px; /* reserve space for fixed navbar */
+}
+
+.authcontainer {
+  width: 100%;
+  max-width: 380px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.authcontainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Desktop two-column layout */
+.container { display: block; }
+.main-col { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+.sidebar-col { margin-top: 16px; }
+
+@media(min-width:1000px) {
+  .container { display: flex; gap: 20px; align-items: flex-start; }
+  .main-col { flex: 1; }
+  .sidebar-col { width: 300px; }
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.navbar {
+  background: #111827;
+  padding: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.nav-left a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+/* Active nav link highlight */
+.navbar a.active,
+.nav-left a.active {
+  background: rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* prevent underlines on links in all states (normal, visited, focus, active) */
+.nav-left a,
+.nav-left a:visited,
+.nav-left a:focus,
+.nav-left a:active {
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* right-side nav links (logout) */
+.nav-right a {
+  color: white;
+  margin-right: 30px;
+  text-decoration: none;
+}
+.nav-right a,
+.nav-right a:visited,
+.nav-right a:focus,
+.nav-right a:active {
+  text-decoration: none;
+}
+
+/* navbar-specific profile adjustments */
+.navbar .profile {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar .profile .left { display:flex; align-items:center; gap:10px; }
+.navbar .profile .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.navbar .profile .info .email { color: #fff; font-weight:600; }
+.navbar .profile .info .role { color: #cbd5e1; font-size:12px; }
+.navbar .profile .info .id { font-size:11px; color: #cbd5e1; }
+
+/* Profile section on navbar */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.profile .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.profile .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-weight: 600;
+}
+.profile .info .email {
+  font-size: 15px;
+  color: #111827;
+  padding-bottom: 5%;
+}
+.profile .info .role {
+  font-size: 13px;
+  color: #6b7280;
+}
+.profile .left .info .id {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Wallet box */
+.wallet-box { background: white; padding: 14px; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+.wallet-box h3 { margin-top: 0; }
+.wallet-box div { margin-top: 8px; color: #374151; }
+
+/* Contract page adjustments */
+.createContractWrapper {
+  width: 500px;
+}
+
+#newcontractBtn {
+  width:50px;
+}
+#createContract {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+
+  display: flex;
+  flex-wrap: wrap;          /* allows wrapping */
+  gap: 15px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Make input boxes horizontal */
+#createContract input {
+  flex: 1 1 200px;          /* flexible width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Force buttons to move to next line */
+#createContract button {
+  flex: 0 0 120px;
+  margin-top: 10px;
+}
+
+
+
+.contractsList .contractItem {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+}
+.contractsTable th, .contractsTable td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+#contractsContainer {
+  width: 100%;
+  max-width: 1500px;   /* fixed horizontal limit */
+  margin: 40px auto;
+  overflow-x: auto;    /* enables horizontal scroll if needed */
+}
+
+#contractsTable {
+  width: 100%;
+  min-width: 900px;    /* keeps table from shrinking too much */
+  border-collapse: collapse;
+}
+
+/* Contract status badges */
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+.status-PENDING { background: #f59e0b; } /* amber */
+.status-ACTIVE { background: #2563eb; } /* blue */
+.status-COMPLETED { background: #16a34a; } /* green */
+.status-CANCELLED { background: #de4a0b; } /* gray */
+
+
+/* Buttons in contract list */
+.contract-actions button { 
+  margin-right: 8px; 
+  font-size: 14px;
+  }
+.btn-disabled { opacity: 0.6; pointer-events: none; }
+
+.btn-fund,
+.btn-createMilestone { 
+  background: #2563eb; 
+  color: #fff; 
+  border: none; 
+  padding: 6px 10px; 
+  border-radius: 6px;
+  cursor: pointer; 
+  }
+.contract-complete-msg {
+  color: #0e8f46; /* darker green */
+  font-size: small;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.milestones-amount-msg {
+  font-size: small;
+  font-weight: 600;
+  margin-top: 8px;
+}
+/* Milestones list styling */
+.milestonesList {
+  display: block;
+}
+.milestonesList .milestoneItem {
+  background: #fff;
+  border: 1px solid #e6e7eb;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.milestoneItem .ms-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ms-title { margin: 0; }
+.ms-body { margin-top: 8px; color: #374151; }
+.ms-actions { margin-top: 10px; }
+
+/* rejected badge */
+.status-REJECTED { background: #ef4444; }
+
+/* Milestone status colors */
+.status-PENDING { background: #f59e0b; }
+.status-APPROVED { background: #16a34a; }
+.status-SUBMITTED { background: #2563eb; }
+.status-DISPUTED { background: #db7500; }
+.status-RESOLVED { background: #05963f; }
+
+/* Inline milestone form inside contract box */
+.inline-ms input[type="text"], .inline-ms input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.inline-ms button.btn-secondary { background: #e5e7eb; color: #111827; border: none; cursor: pointer; }
+.inline-ms button { cursor: pointer; }
+
+/* Toast notifications */
+.toast-container {
+  position: fixed;
+  right: 50%;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2000;
+}
+.toast {
+  background: #111827;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  font-weight: 600;
+}
+.toast.success { background: #78f2a48d; }
+.toast.error { background: #f24a4adc; }
+.toast.info { background: #2564eba2; }
+
+/* Simple confirm modal */
+.confirm-overlay {
+  position: fixed; inset:0; display:flex; align-items:center; justify-content:center; background: rgba(0,0,0,0.5); z-index:2100;
+}
+.confirm-box { background: #fff; padding: 16px; border-radius:8px; width:320px; box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+.confirm-actions { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; }
+
+/* Tooltip for disabled buttons */
+.btn-disabled[title] { position: relative; }
+.btn-disabled[title]:hover::after{
+  content: attr(title);
+  position: absolute; right: 0; top: -32px; background:#111827; color:#fff; padding:6px 8px; border-radius:6px; font-size:12px; white-space:nowrap;
+}
+
+/* Transactions table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.table th, .table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef2f7;
+  vertical-align: middle;
+}
+.table th {
+  background: #f8fafc;
+  color: #111827;
+  font-weight: 600;
+  text-align: left;
+}
+.table tbody tr:hover { background: #fbfdff; }
+.amount-right { text-align: right; white-space: nowrap; }
+
+/* Milestones table detail and actions */
+.ms-detail { display: none; background: #fff; }
+.ms-detail-inner { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:12px 0; }
+.ms-desc { color: #374151; }
+.ms-actions { display:flex; gap:8px; align-items:center; }
+.ms-actions button { background:#2563eb; color:#fff; border:none; padding:8px 10px; border-radius:6px; cursor:pointer; }
+.ms-actions .btn-reject { background:#ef4444; }
+.expand-btn { background: transparent; border: none; color: #374151; font-size:14px; cursor:pointer; padding:6px 8px; }
+.row-approve { background: #16a34a; color: #fff; border: none; padding:6px 10px; border-radius:6px; margin-left:6px; cursor:pointer; }
+.row-reject { background: #ef4444; color: #fff; border: none; padding:6px 10px; border-radius:6px; margin-left:6px; cursor:pointer; }
+.disabled-action { background: #9ca3af !important; color: #fff !important; cursor: default; opacity: 0.7; }
+
+/* Disputes(Admin) table detail and actions */
+.dispute-status { 
+  font-weight: 600; 
+}
+.dispute-actions button { background:#2563eb; 
+  color:#fff; 
+  border:none; 
+  padding:6px 10px; 
+  border-radius:6px; 
+  cursor:pointer; 
+}
