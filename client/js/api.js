@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://escrow-platform-server.onrender.com/api";
 
 async function apiRequest(endpoint, method = "GET", body = null) {
   const token = localStorage.getItem("token");
